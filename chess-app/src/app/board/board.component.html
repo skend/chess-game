@@ -1,0 +1,12 @@
+<div>
+  <table>
+      <tr *ngFor="let num of squareNums">
+        <td *ngFor="let letter of squareLetters" 
+            [ngClass]="this.boardService.boardData[num][letter].color" 
+            (click)="squareClicked($event, this.boardService.boardData[num][letter])" 
+            [ngStyle]="{'width.px': squareSize, 'height.px': squareSize}">
+          {{ this.boardService.boardData[num][letter].piece != null ? Color[this.boardService.boardData[num][letter].piece.color] + ' ' + this.boardService.boardData[num][letter].piece.name : '' }} 
+        </td>
+      </tr>
+  </table>
+</div>

@@ -1,0 +1,11 @@
+.dark {
+  background: #a88e74;
+}
+
+.light {
+  background: #ffce9e;
+}
+
+.selected {
+  background: blue;
+}
